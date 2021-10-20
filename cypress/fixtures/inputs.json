@@ -1,0 +1,58 @@
+{
+    "inputs_ayvi":{
+        
+        "entrada":
+            {
+            "caso_prueba": "viaje_registrado_anteriormente",
+            "credencial_condutor": "70525",
+            "shipment": "ESTEBAN095",
+            "eco_caja": "123",
+            "aux_1": "Pruebaazux",
+            "aux_2": "Pruebaazux2",
+            "aux_3": "Pruebaazux3",
+            "aux_4": "Pruebaazux4"
+            },
+        "ini_carga":
+            {
+            "credencial_condutor": "70525",
+            "shipment": "ESTEBAN0950",
+            "eco_caja": "123",
+            "aux_1": "Pruebaazux",
+            "aux_2": "Pruebaazux2",
+            "aux_3": "Pruebaazux3",
+            "aux_4": "Pruebaazux4"
+            },
+        "fin_carga":
+            {
+            "credencial_condutor": "70525",
+            "shipment": "ESTEBAN0403",
+            "eco_caja": "123",
+            "aux_1": "Pruebaazux",
+            "aux_2": "Pruebaazux2",
+            "aux_3": "Pruebaazux3",
+            "aux_4": "Pruebaazux4"
+            }
+    },
+    "inputs_autozone":{
+        "ini_carga":
+            {
+            "credencial_condutor": "70525",
+            "shipment": "ESTEBAN0403",
+            "eco_caja": "123",
+            "aux_1": "Pruebaazux",
+            "aux_2": "Pruebaazux2",
+            "aux_3": "Pruebaazux3",
+            "aux_4": "Pruebaazux4"
+            },
+        "fin_carga":
+            {
+            "credencial_condutor": "70525",
+            "shipment": "ESTEBAN0403",
+            "eco_caja": "123",
+            "aux_1": "Pruebaazux",
+            "aux_2": "Pruebaazux2",
+            "aux_3": "Pruebaazux3",
+            "aux_4": "Pruebaazux4"
+            }
+    }
+}

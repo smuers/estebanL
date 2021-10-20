@@ -1,0 +1,53 @@
+{
+  "ambiente":
+    {
+      "url_amb": "http://14634.qa.rcontrol.com.mx/User/LogOut"
+    },
+  "credenciales":{
+      "credenciales_ayvi":
+        {
+        "cliente": "ayvi",
+        "user": "admin_ayvi",
+        "password": "Password123$"
+        },
+      "credenciales_autozone":
+        {
+        "cliente": "autozone",
+        "user": "admin_autozone",
+        "password": "Password123$"
+        }
+    },
+  "modulos":{
+    "planeacion":
+      {        
+      "carga_citas": "APPOINTMENT_LOAD",
+      "carga_citas_manual": "MANUAL_APPOINTMENT_LOAD"
+      },
+    "eventos":
+      {        
+      "entrada": "ENTRANCE",
+      "inic_carga": "START_LOAD",
+      "fin_carga": "END_LOAD",
+      "docs": "ENTRANCE",
+      "salida": "EXIT"
+      }
+    }
+    ,
+  "archivos":
+    {
+    "carga_citas_txt_iron_demo": "Citas_pruebas_qa.txt",
+    "carga_citas_txt_ayvi": "Carga_citas_ayvi.txt",
+    "nume": "5",
+    "nume2": "4"
+    },
+    "Pop_Up":{
+      "Texto_pop_up":"Datos incorrectos",
+      "Texto_pop_up1":"Los datos ingresados son incorrectos. Revisalos e inténtalo de nuevo.",
+      "Recuperar_contraseña":"Recuperar Contraseña",
+      "Texto_recuperar_contraseña":"En caso de que la cuenta exista, se enviará un correo electrónico con la información necesaria para poder recuperarla."
+    },
+    "Detalles_de_viaje":{
+      "pedido":"PEDIDO1367",
+      "Cita_de_entrega":"2021-08- 20:00:00"
+    }
+}

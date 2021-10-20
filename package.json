@@ -1,0 +1,17 @@
+{
+  "name": "rc_rutinas",
+  "version": "1.0.0",
+  "description": "codigo con rutinas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rutinas"
+  ],
+  "author": "Esteban",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.4.1"
+  }
+}
