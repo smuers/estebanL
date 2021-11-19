@@ -10,7 +10,6 @@
     "rutinas"
   ],
   "author": "Esteban",
-  
   "license": "ISC",
   "devDependencies": {
     "cypress": "^8.4.1"
