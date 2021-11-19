@@ -4,7 +4,9 @@
   "description": "codigo con rutinas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "Dashboard": "cypress run --record --key 382664da-873f-4482-b339-c9704fd25755",
+    "estres": "cypress run --browser chrome --spec cypress/integration/Pruebas_estres/insertarCitas.js"
   },
   "keywords": [
     "rutinas"
@@ -12,6 +14,7 @@
   "author": "Esteban",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^8.4.1"
+    "cypress": "^8.4.1",
+    "cypress-file-upload": "^5.0.8"
   }
 }

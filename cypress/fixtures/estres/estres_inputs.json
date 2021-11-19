@@ -1,0 +1,8 @@
+{
+    "estres_carga_citas_manual":{
+        "viaje_prefijo": "EST",
+        "pedido_prefijo": "ESTPD",
+        "inic": "5",
+        "fin": "2000"
+    }
+}
