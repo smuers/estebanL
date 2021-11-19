@@ -7,8 +7,9 @@ import 'cypress-file-upload';
 //Rutina obtención de configuración cliente
 Cypress.Commands.add("configClient", () => {
     //Interceptar POST
-    //Preparado para interceptar FeatureConfig de pantalla
     cy.intercept('POST', '**/FeatureConfig').as('client-config')
+    cy.log('@client-config') 
+    console.log('@client-config')
     //cy.wait(8000);
     //return ('@client-config')
     //cy.wait('@client-config').its('response.statusCode').should('eq',200)
@@ -62,77 +63,25 @@ Cypress.Commands.add("eventoEntrada", (url_entrada, credencial_condutor, shipmen
             cy.log('Si tengo ENTRADA')
         
             //Preparado para interceptar FeatureConfig de pantalla
-            cy.intercept('POST', '**/FeatureConfig').as('clientConfig')
+            cy.intercept('POST', '**/FeatureConfig').as('client-config')
 
             //Ingresar a evento Entrada
             cy.get('.has_sub a[href*="feature_key='+url_entrada+'"]').click({ force: true })
             //cy.get('@Eventos').eq(index).click({ force: true })
-            cy.wait(2000)
 
-            
             //Obtener FeatureConfig de pantalla
-            //cy.wait('@clientConfig').then(console.log)
-            //console.log('@client-config')
-            //cy.get('#credential').type(credencial_condutor)
-            //cy.get('#cardautentifier_certified_button').click()
-            cy.wait('@clientConfig').should(({request,response}) => {
-                //expect(request.body).to.include('arg00=140')
-                var campos = response.body.register.event.fields.field;
-                //expect(response.body.register.event.fields).to.have.property('field')
-                //cy.get(response.body.register.event.fields).as('campos')
-                
-                
-                campos.forEach((cms) => {
-                //cy.log(response.body.register.event.fields.field)
-
-
-                    //cy.log(cm)
-                    var campo = cms['name']
-                    cy.log(campo)
-                    //cy.get('#'+campo).type(credencial_condutor, {force: true})
-                    
-                   if(campo=='certificated_driver'){
-                    cy.get('#credential').type(credencial_condutor, {force: true})
-                    cy.get('#cardautentifier_certified_button').click()
-                   }else{
-                    cy.get('#'+campo).type(credencial_condutor, {force: true})
-                   }
-                   
-                    //cy.get('#cardautentifier_certified_button').click()
-
-                    //cy.get('#'+campo).type(eco_caja)
-                    //cy.get('#shipment_card_button_save').click()
-                    
-               // cy.get('#'+campo).type(shipment)
-
-                //var campos = $el.attr('href')
-                //console.log(response.body)
-                //expect('register').to.have.property('event' )
-                //console.log(response.body.register.event.fields.field)
-            })
-            })
-
-            /* cy.get('@clientConfig') 
-            .its('response.body')
-            .should(
-                'to.have',
-                JSON.stringify({
-                register: {
-                    event: {fields: {field:[]}}
-                }
-                })    
-            ) */
-
+            cy.wait('@client-config').then(console.log)
+            console.log('@client-config')
 
               
             //Ingresar datos en campos
-            
-            //cy.get('#credential').type(credencial_condutor)
-            //cy.get('#cardautentifier_certified_button').click()
+            cy.wait(2000);
+            cy.get('#credential').type(credencial_condutor)
+            cy.get('#cardautentifier_certified_button').click()
 
-            //cy.get('#shipment').type(shipment) */
-            //cy.get('#trailer_eco').type(eco_caja)
-            cy.get('#shipment_card_button_save').click() 
+            cy.get('#shipment').type(shipment)
+            cy.get('#trailer_eco').type(eco_caja)
+            cy.get('#shipment_card_button_save').click()
             
             switch(caso){
                 case "viaje_exitoso":

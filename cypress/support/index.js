@@ -15,7 +15,9 @@
 
 // Import commands.js using ES2015 syntax:
 import './rutinas_eventos';
-import './rutinas_planeacion'
+//import './rutinas_planeacion';
+//import './rutinas_tendering';
+//import './estres/rutinas_estres';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
