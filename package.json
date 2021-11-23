@@ -1,17 +1,27 @@
 {
-  "name": "rc_rutinas",
+  "name": "estebanl",
   "version": "1.0.0",
-  "description": "codigo con rutinas",
+  "description": "",
   "main": "index.js",
+  "dependencies": {
+    "cypress": "^8.7.0",
+    "cypress-file-upload": "^5.0.8"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "rutinas"
-  ],
-  "author": "Esteban",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eleyvasRC/estebanL.git"
+  },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eleyvasRC/estebanL/issues"
+  },
+  "homepage": "https://github.com/eleyvasRC/estebanL#readme",
   "devDependencies": {
-    "cypress": "^8.4.1" 
+    "cypress-mochawesome-reporter": "^2.3.0"
   }
 }

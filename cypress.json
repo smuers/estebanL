@@ -1,1 +1,5 @@
-{}
+
+{
+    "chromeWebSecurity": false,
+    "projectId": "ae4eqw"
+  }
