@@ -9,7 +9,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypess:runChorome":"cypress run --browser chrome --spec cypress/integration/Clientes_estandar/Ayvi.js"
+    "cypess:runAyvi":"cypress run --browser chrome --spec cypress/integration/Clientes_estandar/Ayvi.js",
+    "cypess:runAutozone":"cypress run --browser chrome --spec cypress/integration/Clientes_estandar/Autozone.js",
+    "cypess:runColgate":"cypress run --browser chrome --spec cypress/integration/Clientes_estandar/Colgate.js",
+    "cypess:runOrbis":"cypress run --browser chrome --spec cypress/integration/Clientes_estandar/orbis.js"
                          
   },
   "repository": {
