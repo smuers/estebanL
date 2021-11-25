@@ -1,21 +1,34 @@
 {
-  "name": "rc_rutinas",
+  "name": "estebanl",
   "version": "1.0.0",
-  "description": "codigo con rutinas",
+  "description": "",
   "main": "index.js",
+  "dependencies": {
+    "cypress": "^8.7.0",
+    "cypress-file-upload": "^5.0.8"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "Dashboard": "cypress run --record --key 382664da-873f-4482-b339-c9704fd25755",
     "estres": "cypress run --browser chrome --spec cypress/integration/Pruebas_estres/insertarCitas.js",
-    "cypess:runAyvi":"cypress run --browser chrome --spec cypress/integration/Clientes_estandar/Ayvi.js"
+    "cypess:runAyvi":"cypress run --browser chrome --spec cypress/integration/Clientes_estandar/Ayvi.js",
+    "cypess:runAutozone":"cypress run --browser chrome --spec cypress/integration/Clientes_estandar/Autozone.js",
+    "cypess:runColgate":"cypress run --browser chrome --spec cypress/integration/Clientes_estandar/Colgate.js",
+    "cypess:runOrbis":"cypress run --browser chrome --spec cypress/integration/Clientes_estandar/orbis.js"
+                         
   },
-  "keywords": [
-    "rutinas"
-  ],
-  "author": "Esteban",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eleyvasRC/estebanL.git"
+  },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eleyvasRC/estebanL/issues"
+  },
+  "homepage": "https://github.com/eleyvasRC/estebanL#readme",
   "devDependencies": {
-    "cypress": "^8.4.1",
-    "cypress-file-upload": "^5.0.8"
+    "cypress-mochawesome-reporter": "^2.3.0"
   }
 }

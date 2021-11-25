@@ -114,12 +114,12 @@ Cypress.Commands.add("eventoEntrada", (url_entrada, array_inputs, msj) => {
                 var camp_inp = array_inputs;
                     cy.log(camp_inp)
                     
-                      camp_inp.forEach((cms2) => {
+                    camp_inp.forEach((cms2) => {
 
                         var campo_int_2 = cms2[campo]
                         cy.log(campo_int_2)
                         
-                         //Ingresar datos en campos
+                            //Ingresar datos en campos
                         cy.get('#'+campo).should('be.visible').type(campo_int_2)
 
                     })
