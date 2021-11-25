@@ -30,6 +30,15 @@ describe('Detonación de eventos Clientes Estandar', function()
    })   
    //Fin CP
 
+   //CP detonación de evento Fin de carga
+   it('CP detonación de evento Fin de Carga', function(){
+
+        cy.eventoFinCarga
+        (this.param.modulos.eventos.fin_carga, this.inputs.inputs_ayvi.fin_carga.shipment, this.param.credenciales.credenciales_ayvi.cliente)
+    
+    }) 
+    //Fin CP
+
    //Evento Documentos
 
     /* it('Documentos', function(){

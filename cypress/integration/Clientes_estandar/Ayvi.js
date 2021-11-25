@@ -6,14 +6,16 @@ describe('Detonación de eventos Clientes Estandar', function()
 
     beforeEach(() => { 
         
+        //Llamar rutina carga de configuración cliente
+    
         //Cargar parametros de parametros.json 
         cy.fixture('parametros').then(function(param){
             this.param = param
 
-            //Ingresar a página
+            //Llamar rutina login
             cy.login
             (this.param.ambiente.url_amb, this.param.credenciales.credenciales_ayvi.user, this.param.credenciales.credenciales_ayvi.password)
-         })
+        })
 
          //Cargar Inputs de inputs.json
         cy.fixture('inputs').then(function(inputs){
@@ -23,20 +25,33 @@ describe('Detonación de eventos Clientes Estandar', function()
     })
 
     //CU evento Entrada
-    it('Evento Entrada exitoso', function(){
-
+    it('Evento Entrada', function(){
+        
+        //Llamar rutina evento entrada
         cy.eventoEntrada
-        (this.param.modulos.eventos.entrada, this.inputs.inputs_ayvi.entrada.credencial_condutor, this.inputs.inputs_ayvi.entrada.shipment, this.inputs.inputs_ayvi.entrada.eco_caja, this.inputs.inputs_ayvi.entrada.caso_prueba)
+        (this.param.modulos.eventos.entrada, this.inputs.inputs_ayvi, this.param.credenciales.credenciales_ayvi.mensaje)
+
 
     })  
-    //Fin CP detonación de evento Entrada
+    //Fin CP evento Entrada
 
-    //CP detonación de evento Inicio de carga
-    
-    it('CP detonación de evento Inicio de Carga', function(){
-
+    //CP evento Inicio de carga
+    it('Evento Inicio de Carga', function(){
+       
+        //Llamar rutina evento inicio de carga
         cy.eventoInicCarga
-        (this.param.modulos.eventos.inic_carga, this.inputs.inputs_ayvi.ini_carga.shipment, this.param.credenciales.credenciales_ayvi.cliente)
+        (this.param.modulos.eventos.inic_carga)
+        
+    }) 
+    //Fin CP
+
+
+    //CP evento Fin de carga
+    it('Evento Fin de Carga', function(){
+
+        //Llamar rutina evento fin de carga
+        cy.eventoFinCarga
+        (this.param.modulos.eventos)
         
     }) 
     //Fin CP
@@ -79,7 +94,7 @@ describe('Detonación de eventos Clientes Estandar', function()
    //Evento Documentos
 
     /* it('Documentos', function(){
-        //ingersar a modulo de carga de Documentos
+        //ingresar a modulo de carga de Documentos
         //Validar que contenga el viaje
         //validar 
     }) */
