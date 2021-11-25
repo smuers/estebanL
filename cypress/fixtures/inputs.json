@@ -1,68 +1,70 @@
 {
-    "inputs_ayvi":{
-        "entrada_":
-            [{
-            "caso_prueba": "Prueba EST",
-            "credencial_condutor": "70525",
-            "shipment": "ESTEBAN022",
-            "eco_caja": "123",
-            "aux_1": "Pruebaazux",
-            "aux_2": "Pruebaazux2",
-            "aux_3": "Pruebaazux3",
-            "aux_4": "Pruebaazux4"
-            }],
-        "entrada":
-            {
-            "caso_prueba": "Prueba EST",
-            "credencial_condutor": "70525",
-            "shipment": "ESTEBAN022",
-            "eco_caja": "123",
-            "aux_1": "Pruebaazux",
-            "aux_2": "Pruebaazux2",
-            "aux_3": "Pruebaazux3",
-            "aux_4": "Pruebaazux4"
-            },
-        "ini_carga":
-            {
-            "credencial_condutor": "70525",
-            "shipment": "ESTEBAN020",
-            "eco_caja": "123",
-            "aux_1": "Pruebaazux",
-            "aux_2": "Pruebaazux2",
-            "aux_3": "Pruebaazux3",
-            "aux_4": "Pruebaazux4"
-            },
-        "fin_carga":
-            {
-            "credencial_condutor": "70525",
-            "shipment": "ESTEBAN020",
-            "eco_caja": "123",
-            "aux_1": "Pruebaazux",
-            "aux_2": "Pruebaazux2",
-            "aux_3": "Pruebaazux3",
-            "aux_4": "Pruebaazux4"
-            }
-    },
-    "inputs_autozone":{
-        "ini_carga":
-            {
-            "credencial_condutor": "70525",
-            "shipment": "ESTEBAN0403",
-            "eco_caja": "123",
-            "aux_1": "Pruebaazux",
-            "aux_2": "Pruebaazux2",
-            "aux_3": "Pruebaazux3",
-            "aux_4": "Pruebaazux4"
-            },
-        "fin_carga":
-            {
-            "credencial_condutor": "70525",
-            "shipment": "ESTEBAN0403",
-            "eco_caja": "123",
-            "aux_1": "Pruebaazux",
-            "aux_2": "Pruebaazux2",
-            "aux_3": "Pruebaazux3",
-            "aux_4": "Pruebaazux4"
-            }
-    }
+    "inputs_ayvi":
+        [{
+        "caso_prueba": "Registro exitoso",
+        "mensaje": "Viaje no encontrado",
+        "credencial_condutor_cert": "70525",
+        "shipment": "ESTEBAN022",
+        "eco_caja": "123",
+        "trailer_eco": "prueba eco",
+        "aux_1": "Pruebaazux",
+        "aux_2": "Pruebaazux2",
+        "aux_3": "Pruebaazux3",
+        "credencial_condutor_no_cert": "Esteban Leyva",
+        "lt": "Rc",
+        "aux_4": "Pruebaazux4",
+        "note": "Omi prueba"
+        }],
+
+    "inputs_autozone":
+        [{
+        "caso_prueba": "Registro exitoso",
+        "mensaje": "Viaje no encontrado",
+        "credencial_condutor_cert": "70525",
+        "shipment": "ESTEBAN022",
+        "eco_caja": "123",
+        "trailer_eco": "prueba eco",
+        "aux_1": "Pruebaazux",
+        "aux_2": "Pruebaazux2",
+        "aux_3": "Pruebaazux3",
+        "credencial_condutor_no_cert": "Esteban Leyva",
+        "lt": "Rc",
+        "aux_4": "Pruebaazux4",
+        "note": "Omi prueba"
+        }],
+
+    "inputs_orbis":
+        [{
+        "caso_prueba": "Registro exitoso",
+        "mensaje": "Viaje no encontrado",
+        "credencial_condutor_cert": "70525",
+        "shipment": "ESTEBAN022",
+        "eco_caja": "123",
+        "trailer_eco": "prueba eco",
+        "aux_1": "Pruebaazux",
+        "aux_2": "Pruebaazux2",
+        "aux_3": "Pruebaazux3",
+        "credencial_condutor_no_cert": "Esteban Leyva",
+        "lt": "Rc",
+        "aux_4": "Pruebaazux4",
+        "note": "Omi prueba"
+        }],
+
+    "inputs_colgate":
+        [{
+        "caso_prueba": "Registro exitoso",
+        "mensaje": "Viaje no encontrado",
+        "credencial_condutor_cert": "70525",
+        "shipment": "ESTEBAN022",
+        "eco_caja": "123",
+        "trailer_eco": "prueba eco",
+        "aux_1": "Pruebaazux",
+        "aux_2": "Pruebaazux2",
+        "aux_3": "Pruebaazux3",
+        "credencial_condutor_no_cert": "Esteban Leyva",
+        "lt": "Rc",
+        "aux_4": "Pruebaazux4",
+        "note": "Omi prueba"
+        }]
+
 }

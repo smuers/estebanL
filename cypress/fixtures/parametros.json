@@ -3,25 +3,26 @@
     {
       "url_amb": "http://15551.qa.rcontrol.com.mx/User/LogOut"
     },
-  "credenciales":{
+    "credenciales":{
       "credenciales_ayvi":
         {
         "cliente": "ayvi",
         "user": "admin_ayvi",
-        "password": "Password123$"
+        "password": "Password123$",
+        "mensaje": "Viaje no encontrado"
         },
       "credenciales_autozone":
         {
         "cliente": "autozone",
         "user": "admin_autozone",
         "password": "Password135#"
-      },  
-    "credenciales_orbis":
-      {
-      "cliente": "orbis",
-      "user": "admin_orbis",
-      "password": "Soporte135*"
-      },
+        },  
+      "credenciales_orbis":
+        {
+        "cliente": "orbis",
+        "user": "admin_orbis",
+        "password": "Soporte135*"
+        },
       "credenciales_ferrero":
         {
         "cliente": "ferrero",
@@ -43,13 +44,14 @@
       "docs": "ENTRANCE",
       "salida": "EXIT"
       },
-      "tendering":
-        {
-          "asignacion": "TENDERING_OPERATIVE_REPORT"
-        },
-      "reporteria":{
-        "sabana_de_datos": ""
-    }
+    "tendering":
+      {
+      "asignacion": "TENDERING_OPERATIVE_REPORT"
+      },
+    "reporteria":
+      {
+      "sabana_de_datos": ""
+      }
   },
   "archivos":
     {

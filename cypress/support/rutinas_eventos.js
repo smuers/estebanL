@@ -49,120 +49,92 @@ Cypress.Commands.add("CCitasManual", (url_ccm) => {
 //***** Rutinas de eventos para clientes estandar *****//
 
 //Rutina Evento Entrada
-Cypress.Commands.add("eventoEntrada", (url_entrada, credencial_condutor, shipment, eco_caja, caso) => {
-       
-    cy.get('.has_sub').as('Eventos')
+Cypress.Commands.add("eventoEntrada", (url_entrada, array_inputs, msj) => {
+         
+    //***** Código para validar si existe el evento ENTRADA *****//
+    /* cy.get('.has_sub').as('Eventos')
 
     cy.get('@Eventos').find('a').each(($el, index, $list) => {
         
         var link_event = $el.attr('href')
 
-        //Validar si existe el evento ENTRADA
         if(link_event?.includes('feature_key='+url_entrada)){
             cy.log('Si tengo ENTRADA')
-        
-            //Preparado para interceptar FeatureConfig de pantalla
-            cy.intercept('POST', '**/FeatureConfig').as('clientConfig')
-
-            //Ingresar a evento Entrada
-            cy.get('.has_sub a[href*="feature_key='+url_entrada+'"]').click({ force: true })
-            //cy.get('@Eventos').eq(index).click({ force: true })
-            cy.wait(2000)
-
-            
-            //Obtener FeatureConfig de pantalla
-            //cy.wait('@clientConfig').then(console.log)
-            //console.log('@client-config')
-            //cy.get('#credential').type(credencial_condutor)
-            //cy.get('#cardautentifier_certified_button').click()
-            cy.wait('@clientConfig').should(({request,response}) => {
-                //expect(request.body).to.include('arg00=140')
-                var campos = response.body.register.event.fields.field;
-                //expect(response.body.register.event.fields).to.have.property('field')
-                //cy.get(response.body.register.event.fields).as('campos')
-                
-                
-                campos.forEach((cms) => {
-                //cy.log(response.body.register.event.fields.field)
-
-
-                    //cy.log(cm)
-                    var campo = cms['name']
-                    cy.log(campo)
-                    //cy.get('#'+campo).type(credencial_condutor, {force: true})
-                    
-                   if(campo=='certificated_driver'){
-                    cy.get('#credential').type(credencial_condutor, {force: true})
-                    cy.get('#cardautentifier_certified_button').click()
-                   }else{
-                    cy.get('#'+campo).type(credencial_condutor, {force: true})
-                   }
-                   
-                    //cy.get('#cardautentifier_certified_button').click()
-
-                    //cy.get('#'+campo).type(eco_caja)
-                    //cy.get('#shipment_card_button_save').click()
-                    
-               // cy.get('#'+campo).type(shipment)
-
-                //var campos = $el.attr('href')
-                //console.log(response.body)
-                //expect('register').to.have.property('event' )
-                //console.log(response.body.register.event.fields.field)
-            })
-            })
-
-            /* cy.get('@clientConfig') 
-            .its('response.body')
-            .should(
-                'to.have',
-                JSON.stringify({
-                register: {
-                    event: {fields: {field:[]}}
-                }
-                })    
-            ) */
-
-
-              
-            //Ingresar datos en campos
-            
-            //cy.get('#credential').type(credencial_condutor)
-            //cy.get('#cardautentifier_certified_button').click()
-
-            //cy.get('#shipment').type(shipment) */
-            //cy.get('#trailer_eco').type(eco_caja)
-            cy.get('#shipment_card_button_save').click() 
-            
-            switch(caso){
-                case "viaje_exitoso":
-                    //Caso registro exitoso
-                    cy.get('.toast-message').contains('Registro exitoso').then((contains)=>{
-                        //cy.log(contains)
-                        cy.log("Registro evento Entrada exitoso")  
-                    })  
-                break;
-                
-                case "viaje_no_encontrado":
-                    //Buscar shipment a asignar y dar click en Confirmar de la tabla
-                    cy.get('.toast-message').contains('Viaje no encontrado').then((contains)=>{
-                    cy.log("")  
-                    })  
-                    
-                break;
-                
-                case "viaje_registrado_anteriormente":
-                    //Buscar shipment a asignar y dar click en Confirmar de la tabla
-                    cy.get('.toast-message').contains('Este evento ya fue registrado en otro momento').then((contains)=>{
-                    cy.log("")  
-                    })  
-                    
-                break;
-            } 
-
+            cy.get('@Eventos').eq(index).click({ force: true }) 
         }
-    
+    }) */
+    //***** Fin código para validar si existe evento *****//
+
+                
+    //Preparado para interceptar FeatureConfig de pantalla
+    cy.intercept('POST', '**/FeatureConfig').as('clientConfig')
+
+    //Ingresar a evento Entrada
+    cy.get('.has_sub a[href*="feature_key='+url_entrada+'"]').click({ force: true })
+    cy.wait(2000)
+
+    //Obtención de Response de FeatureConfig
+    cy.wait('@clientConfig').should(({request,response}) => {
+        //expect(request.body).to.include('arg00=140')
+        var campos = response.body.register.event.fields.field;
+        
+        //Encontrar si hay conductor en el formulario
+        campos.forEach((cms) => {
+
+            var campo = cms['name']
+            cy.log(campo)
+            
+            if(campo=='certificated_driver'){
+                //Ingresar datos en campos
+                cy.get('#credential').should('be.visible').type('70525')
+                cy.get('#cardautentifier_certified_button').should('be.visible').click()
+
+            }else if(campo=='uncertificated_driver'){
+                //Ingresar datos en campos
+                cy.get('#cardautentifier_uncertified_tab').should('be.visible').click()
+                cy.get('#uncertified_driver_name').should('be.visible').type('Esteban Leyva')
+                cy.get('#uncertified_transline_name').type('Rc', {force: true})
+                cy.wait(1000)
+                cy.get('#ui-id-6').click()
+                //cy.get('.ui-menu-item > a').eq("Rc").click()
+                cy.get('#cardautentifier_uncertified_button').should('be.visible').click()
+
+            }
+
+        })
+
+        //Llenar campos del formulario
+        campos.forEach((cms) => {
+
+            var campo = cms['name']
+            cy.log(campo)
+            
+            if(campo!='certificated_driver' && campo!='uncertificated_driver'){
+
+                var camp_inp = array_inputs;
+                    cy.log(camp_inp)
+                    
+                      camp_inp.forEach((cms2) => {
+
+                        var campo_int_2 = cms2[campo]
+                        cy.log(campo_int_2)
+                        
+                         //Ingresar datos en campos
+                        cy.get('#'+campo).should('be.visible').type(campo_int_2)
+
+                    })
+            }
+        })
     })
+    //Fin obtención de Response de FeatureConfig
+
+    //Guardar evento
+    cy.get('#shipment_card_button_save').should('be.visible').click() 
+    
+    cy.get('.toast-message').contains(msj).then((contains)=>{
+        //cy.log(contains)
+        cy.log("CP evento Entrada exitoso")  
+    })  
 }) 
 //Fin rutina evento Entrada
 

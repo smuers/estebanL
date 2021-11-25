@@ -29,7 +29,7 @@ describe('Detonación de eventos Clientes Estandar', function()
         
         //Llamar rutina evento entrada
         cy.eventoEntrada
-        (this.param.modulos.eventos.entrada, this.inputs.inputs_ayvi.entrada.credencial_condutor, this.inputs.inputs_ayvi.entrada.shipment, this.inputs.inputs_ayvi.entrada.eco_caja, this.inputs.inputs_ayvi.entrada.caso_prueba)
+        (this.param.modulos.eventos.entrada, this.inputs.inputs_ayvi, this.param.credenciales.credenciales_ayvi.mensaje)
 
 
     })  
@@ -40,7 +40,7 @@ describe('Detonación de eventos Clientes Estandar', function()
        
         //Llamar rutina evento inicio de carga
         cy.eventoInicCarga
-        (this.param.modulos.eventos.inic_carga, this.inputs.inputs_ayvi.ini_carga.shipment, this.param.credenciales.credenciales_ayvi.cliente)
+        (this.param.modulos.eventos.inic_carga)
         
     }) 
     //Fin CP
@@ -51,7 +51,7 @@ describe('Detonación de eventos Clientes Estandar', function()
 
         //Llamar rutina evento fin de carga
         cy.eventoFinCarga
-        (this.param.modulos.eventos.fin_carga, this.inputs.inputs_ayvi.fin_carga.shipment, this.param.credenciales.credenciales_ayvi.cliente)
+        (this.param.modulos.eventos)
         
     }) 
     //Fin CP
@@ -94,7 +94,7 @@ describe('Detonación de eventos Clientes Estandar', function()
    //Evento Documentos
 
     /* it('Documentos', function(){
-        //ingersar a modulo de carga de Documentos
+        //ingresar a modulo de carga de Documentos
         //Validar que contenga el viaje
         //validar 
     }) */
