@@ -1,5 +1,13 @@
 
 {
     "chromeWebSecurity": false,
-    "projectId": "ae4eqw"
+    "projectId": "ae4eqw",
+    "screenshotOnRunFailure":true,
+    "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "cypress/report",
+    "charts": true,
+    "reportPageTitle": "custom-title",
+    "embeddedScreenshots": true
+  }
   }
