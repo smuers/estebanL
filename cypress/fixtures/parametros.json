@@ -9,25 +9,30 @@
         "cliente": "ayvi",
         "user": "admin_ayvi",
         "password": "Password123$",
-        "mensaje": "Viaje no encontrado"
+        "mensaje": "Registro exitoso",
+        "mensaje2": "Este evento ya fue registrado en otro momento",
+        "mensaje3": "Viaje no encontrado"
         },
       "credenciales_autozone":
         {
         "cliente": "autozone",
         "user": "admin_autozone",
-        "password": "Password135#"
+        "password": "Password135#",
+        "mensaje": "Viaje no encontrado"
         },  
       "credenciales_orbis":
         {
         "cliente": "orbis",
         "user": "admin_orbis",
-        "password": "Soporte135*"
+        "password": "Soporte135*",
+        "mensaje": "Viaje no encontrado"
         },
       "credenciales_ferrero":
         {
         "cliente": "ferrero",
         "user": "admin_ferrero_corp",
-        "password": "Password135#"
+        "password": "Password135#",
+        "mensaje": "Este evento ya fue registrado en otro momento"
         }
     },
   "modulos":{
@@ -41,7 +46,7 @@
       "entrada": "ENTRANCE",
       "inic_carga": "START_LOAD",
       "fin_carga": "END_LOAD",
-      "docs": "ENTRANCE",
+      "docs": "DOCUMENT",
       "salida": "EXIT"
       },
     "tendering":
@@ -57,7 +62,7 @@
     {
     "carga_citas_txt_iron_demo": "Citas_pruebas_qa.txt",
     "carga_citas_txt_ayvi": "Carga_citas_ayvi.txt",
-    "nume": "5",
+    "nume": "3",
     "nume2": "4"
     },
     "Pop_Up":{

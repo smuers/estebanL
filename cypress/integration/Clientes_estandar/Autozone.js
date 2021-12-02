@@ -11,7 +11,7 @@ describe('Detonación de eventos Clientes Estandar', function()
             this.param = param
 
             //Ingresar a página
-            cy.login(this.param.ambiente.url_amb, cliente+this.param.credenciales.user, this.param.credenciales_ayvi.password)
+            cy.login(this.param.ambiente.url_amb, this.param.credenciales.credenciales_autozone.user, this.param.credenciales.credenciales_autozone.password)
          })
 
          //Cargar Inputs
@@ -23,29 +23,21 @@ describe('Detonación de eventos Clientes Estandar', function()
 
 
     //CP detonación de evento Inicio de carga
-    it('CP detonación de evento Inicio de Carga', function(){
+    it('Evento Inicio de Carga Autozone', function(){
 
         cy.eventoInicCarga
-        (this.param.eventos.inic_carga, this.inputs.inputs_autozone.ini_carga.shipment, )
+        (this.param.modulos.eventos.inic_carga, this.inputs.inputs_autozone, this.param.credenciales.credenciales_autozone.mensaje)
    })   
    //Fin CP
 
    //CP detonación de evento Fin de carga
-   it('CP detonación de evento Fin de Carga', function(){
+   it('Evento Fin de Carga Autozone', function(){
 
         cy.eventoFinCarga
-        (this.param.modulos.eventos.fin_carga, this.inputs.inputs_ayvi.fin_carga.shipment, this.param.credenciales.credenciales_ayvi.cliente)
+        (this.param.modulos.eventos.fin_carga, this.inputs.inputs_autozone, this.param.credenciales.credenciales_autozone.mensaje)
     
     }) 
     //Fin CP
-
-   //Evento Documentos
-
-    /* it('Documentos', function(){
-        //ingersar a modulo de carga de Documentos
-        //Validar que contenga el viaje
-        //validar 
-    }) */
 
 
 })
