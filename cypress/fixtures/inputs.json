@@ -1,70 +1,70 @@
 {
-    "inputs_ayvi":
-        [{
-        "caso_prueba": "Registro exitoso",
-        "mensaje": "Viaje no encontrado",
-        "credencial_condutor_cert": "70525",
-        "shipment": "ESTEBAN022",
-        "eco_caja": "123",
-        "trailer_eco": "prueba eco",
-        "aux_1": "Pruebaazux",
-        "aux_2": "Pruebaazux2",
-        "aux_3": "Pruebaazux3",
-        "credencial_condutor_no_cert": "Esteban Leyva",
-        "lt": "Rc",
-        "aux_4": "Pruebaazux4",
-        "note": "Omi prueba"
-        }],
-
-    "inputs_autozone":
-        [{
-        "caso_prueba": "Registro exitoso",
-        "mensaje": "Viaje no encontrado",
-        "credencial_condutor_cert": "70525",
-        "shipment": "ESTEBAN022",
-        "eco_caja": "123",
-        "trailer_eco": "prueba eco",
-        "aux_1": "Pruebaazux",
-        "aux_2": "Pruebaazux2",
-        "aux_3": "Pruebaazux3",
-        "credencial_condutor_no_cert": "Esteban Leyva",
-        "lt": "Rc",
-        "aux_4": "Pruebaazux4",
-        "note": "Omi prueba"
-        }],
-
-    "inputs_orbis":
-        [{
-        "caso_prueba": "Registro exitoso",
-        "mensaje": "Viaje no encontrado",
-        "credencial_condutor_cert": "70525",
-        "shipment": "ESTEBAN022",
-        "eco_caja": "123",
-        "trailer_eco": "prueba eco",
-        "aux_1": "Pruebaazux",
-        "aux_2": "Pruebaazux2",
-        "aux_3": "Pruebaazux3",
-        "credencial_condutor_no_cert": "Esteban Leyva",
-        "lt": "Rc",
-        "aux_4": "Pruebaazux4",
-        "note": "Omi prueba"
-        }],
-
-    "inputs_colgate":
-        [{
-        "caso_prueba": "Registro exitoso",
-        "mensaje": "Viaje no encontrado",
-        "credencial_condutor_cert": "70525",
-        "shipment": "ESTEBAN022",
-        "eco_caja": "123",
-        "trailer_eco": "prueba eco",
-        "aux_1": "Pruebaazux",
-        "aux_2": "Pruebaazux2",
-        "aux_3": "Pruebaazux3",
-        "credencial_condutor_no_cert": "Esteban Leyva",
-        "lt": "Rc",
-        "aux_4": "Pruebaazux4",
-        "note": "Omi prueba"
-        }]
-
+    "inputs_ayvi": [
+        {
+            "credencial_condutor_cert": "70525",
+            "shipment": "EST0002000000000",
+            "eco_caja": "123",
+            "trailer_eco": "prueba eco",
+            "aux_1": "Pruebaazux",
+            "aux_2": "Pruebaazux2",
+            "aux_3": "Pruebaazux3",
+            "credencial_condutor_no_cert": "Esteban Leyva",
+            "lt": "Rc",
+            "aux_4": "Pruebaazux4",
+            "note": "Omi prueba",
+            "certificated_driver": "70525",
+            "uncertificated_driver": "Esteban Leyva conductor"
+        }
+    ],
+    "inputs_autozone": [
+        {
+            "caso_prueba": "Registro exitoso",
+            "mensaje": "Viaje no encontrado",
+            "credencial_condutor_cert": "70525",
+            "shipment": "ESTEBAN022",
+            "eco_caja": "123",
+            "trailer_eco": "prueba eco",
+            "aux_1": "Pruebaazux",
+            "aux_2": "Pruebaazux2",
+            "aux_3": "Pruebaazux3",
+            "credencial_condutor_no_cert": "Esteban Leyva",
+            "lt": "Rc",
+            "aux_4": "Pruebaazux4",
+            "note": "Omi prueba"
+        }
+    ],
+    "inputs_orbis": [
+        {
+            "caso_prueba": "Registro exitoso",
+            "mensaje": "Viaje no encontrado",
+            "credencial_condutor_cert": "70525",
+            "shipment": "ESTEBAN022",
+            "eco_caja": "123",
+            "trailer_eco": "prueba eco",
+            "aux_1": "Pruebaazux",
+            "aux_2": "Pruebaazux2",
+            "aux_3": "Pruebaazux3",
+            "credencial_condutor_no_cert": "Esteban Leyva",
+            "lt": "Rc",
+            "aux_4": "Pruebaazux4",
+            "note": "Omi prueba"
+        }
+    ],
+    "inputs_colgate": [
+        {
+            "caso_prueba": "Registro exitoso",
+            "mensaje": "Viaje no encontrado",
+            "credencial_condutor_cert": "70525",
+            "shipment": "ESTEBAN022",
+            "eco_caja": "123",
+            "trailer_eco": "prueba eco",
+            "aux_1": "Pruebaazux",
+            "aux_2": "Pruebaazux2",
+            "aux_3": "Pruebaazux3",
+            "credencial_condutor_no_cert": "Esteban Leyva",
+            "lt": "Rc",
+            "aux_4": "Pruebaazux4",
+            "note": "Omi prueba"
+        }
+    ]
 }
