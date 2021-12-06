@@ -25,7 +25,7 @@ describe('Detonación de eventos Clientes Estandar', function()
     })
 
     //CP Carga de citas
-    it('Carga de citas', function(){
+    it('Carga de Pedidos', function(){
 
         //Llamar rutina rutinaCargaCitastxt
         cy.rutinaCargaArchivosTXT
@@ -36,7 +36,7 @@ describe('Detonación de eventos Clientes Estandar', function()
 
 
     //CP evento Entrada
-    it('Evento Entrada Ayvi', function(){
+    it('Evento Entrada', function(){
         
         //Llamar rutina rutinaEventosFormulario
         cy.rutinaEventosListadoMasFormulario
