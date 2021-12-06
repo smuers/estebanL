@@ -177,7 +177,7 @@ Cypress.Commands.add("rutinaEventosListado", (url_documentos, inputs) => {
 
 
 //Rutina eventos por listado + formulario
-Cypress.Commands.add("rutinaEventosListadoMasFormualrio", (url_entrada, arry_inputs, msj ) => {
+Cypress.Commands.add("rutinaEventosListadoMasFormulario", (url_entrada, arry_inputs, msj ) => {
     
     //Preparado para interceptar FeatureConfig de pantalla
     cy.intercept('POST', '**/FeatureConfig').as('clientConfig')
