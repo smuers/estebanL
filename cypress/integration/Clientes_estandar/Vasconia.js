@@ -24,22 +24,22 @@ describe('Detonación de eventos Clientes Estandar', function()
        
     })
 
-     //CP Carga de citas
-/*      it('Carga de citas', function(){
+    //CP Carga de citas
+    it('Carga de Pedidos', function(){
 
         //Llamar rutina rutinaCargaCitastxt
         cy.rutinaCargaArchivosTXT
         (this.param.modulos.planeacion.carga_pedidos, this.param.archivos.carga_pedidos_txt_vasconia,this.param.archivos.nume_citas)
         
-    })   */ 
+    })
     //Fin CP
 
 
     //CP evento Entrada
-    it('Evento Entrada Ayvi', function(){
+    it('Evento Entrada', function(){
         
         //Llamar rutina rutinaEventosFormulario
-        cy.rutinaEventosListadoMasFormualrio
+        cy.rutinaEventosListadoMasFormulario
         (this.param.modulos.eventos.entrada, this.inputs.inputs_vasconia, this.param.credenciales.credenciales_vasconia.mensaje)
 
     }) 

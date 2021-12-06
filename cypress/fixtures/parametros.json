@@ -64,7 +64,11 @@
       "inic_carga": "START_LOAD",
       "fin_carga": "END_LOAD",
       "docs": "DOCUMENT",
-      "salida": "EXIT"
+      "salida": "EXIT",
+      "generico_01": "GENERIC_01",
+      "generico_02": "GENERIC_02",
+      "generico_03": "GENERIC_03",
+      "enrampe": "ENRAMPE"
       },
     "tendering":
       {
