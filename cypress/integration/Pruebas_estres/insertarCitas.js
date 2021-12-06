@@ -1,4 +1,4 @@
-/// <reference types="Cypress"/>
+/* /// <reference types="Cypress"/>
 
 //Suite de primeros CP
 describe('Carca citas manual', function()
@@ -75,4 +75,4 @@ describe('Carca citas manual', function()
 
  
 
-})
+}) */
