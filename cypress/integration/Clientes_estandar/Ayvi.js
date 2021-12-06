@@ -28,8 +28,8 @@ describe('Detonación de eventos Clientes Estandar', function()
      it('Carga de citas', function(){
 
         //Llamar rutina rutinaCargaCitastxt
-        cy.rutinaCargaCitastxt
-        (this.param.modulos.planeacion.carga_citas, this.param.archivos.carga_citas_txt_ayvi,this.param.archivos.nume)
+        cy.rutinaCargaArchivosTXT
+        (this.param.modulos.planeacion.carga_citas, this.param.archivos.carga_citas_txt_ayvi,this.param.archivos.nume_citas)
         
     })  
     //Fin CP

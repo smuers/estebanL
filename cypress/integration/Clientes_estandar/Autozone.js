@@ -6,38 +6,32 @@ describe('Detonación de eventos Clientes Estandar', function()
 
     beforeEach(() => { 
         
-        //Cargar parametros
+        //Llamar rutina carga de configuración cliente
+    
+        //Cargar parametros de parametros.json 
         cy.fixture('parametros').then(function(param){
             this.param = param
 
-            //Ingresar a página
-            cy.login(this.param.ambiente.url_amb, this.param.credenciales.credenciales_autozone.user, this.param.credenciales.credenciales_autozone.password)
-         })
+            //Llamar rutina login
+            cy.login
+            (this.param.ambiente.url_amb, this.param.credenciales.credenciales_autozone.user, this.param.credenciales.credenciales_autozone.password)
+        })
 
-         //Cargar Inputs
+         //Cargar Inputs de inputs.json
         cy.fixture('inputs').then(function(inputs){
             this.inputs = inputs
         })
        
     })
 
+     //CP Carga de citas
+     it('Carga de pedidos', function(){
 
-    //CP detonación de evento Inicio de carga
-    it('Evento Inicio de Carga Autozone', function(){
-
-        cy.eventoInicCarga
-        (this.param.modulos.eventos.inic_carga, this.inputs.inputs_autozone, this.param.credenciales.credenciales_autozone.mensaje)
-   })   
-   //Fin CP
-
-   //CP detonación de evento Fin de carga
-   it('Evento Fin de Carga Autozone', function(){
-
-        cy.eventoFinCarga
-        (this.param.modulos.eventos.fin_carga, this.inputs.inputs_autozone, this.param.credenciales.credenciales_autozone.mensaje)
-    
-    }) 
+        //Llamar rutina rutinaCargaCitastxt
+        cy.rutinaCargaCitastxt
+        (this.param.modulos.planeacion.carga_pedidos, this.param.archivos.carga_pedidos_txt_autozone,this.param.archivos.nume_pedidos)
+        
+    })  
     //Fin CP
-
 
 })
