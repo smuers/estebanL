@@ -3,69 +3,108 @@
     {
       "url_amb": "http://15551.qa.rcontrol.com.mx/User/LogOut"
     },
-  "credenciales":{
+    "credenciales":{
       "credenciales_ayvi":
         {
-        "cliente": "ayvi",
-        "user": "admin_ayvi",
-        "password": "Password123$"
+          "cliente": "ayvi",
+          "user": "admin_ayvi",
+          "password": "Password123$",
+          "mensaje": "Registro exitoso",
+          "mensaje2": "Este evento ya fue registrado en otro momento",
+          "mensaje3": "Viaje no encontrado"
         },
       "credenciales_autozone":
         {
-        "cliente": "autozone",
-        "user": "admin_autozone",
-        "password": "Password135#"
-      },  
-    "credenciales_orbis":
-      {
-      "cliente": "orbis",
-      "user": "admin_orbis",
-      "password": "Soporte135*"
-      },
+          "cliente": "autozone",
+          "user": "admin_autozone",
+          "password": "Password135#",
+          "mensaje": "Registro exitoso",
+          "mensaje2": "Este evento ya fue registrado en otro momento",
+          "mensaje3": "Viaje no encontrado"
+        },  
+      "credenciales_orbis":
+        {
+          "cliente": "orbis",
+          "user": "admin_orbis",
+          "password": "Soporte135*",
+          "mensaje": "Registro exitoso",
+          "mensaje2": "Este evento ya fue registrado en otro momento",
+          "mensaje3": "Viaje no encontrado"
+        },
+        "credenciales_bimbo":
+        {
+          "cliente": "bimbo",
+          "user": "admin_bimbo",
+          "password": "Password123$",
+          "mensaje": "Registro exitoso",
+          "mensaje2": "Este evento ya fue registrado en otro momento",
+          "mensaje3": "Viaje no encontrado"
+        },
+        "credenciales_kimberly":
+        {
+          "cliente": "kimberly",
+          "user": "admin_kimberly",
+          "password": "Kimberly2020$",
+          "mensaje": "Registro exitoso",
+          "mensaje2": "Este evento ya fue registrado en otro momento",
+          "mensaje3": "Viaje no encontrado"
+        },
       "credenciales_ferrero":
         {
-        "cliente": "ferrero",
-        "user": "admin_ferrero_corp",
-        "password": "Password135#"
+          "cliente": "ferrero",
+          "user": "admin_ferrero_corp",
+          "password": "Password135#",
+          "mensaje": "Registro exitoso",
+          "mensaje2": "Este evento ya fue registrado en otro momento",
+          "mensaje3": "Viaje no encontrado"
+        },
+      "credenciales_vasconia":
+          {
+            "cliente": "vasconia",
+            "user": "admin_vasconia",
+            "password": "Password135$",
+            "mensaje": "Registro exitoso",
+            "mensaje2": "Este evento ya fue registrado en otro momento",
+            "mensaje3": "Viaje no encontrado"
         }
     },
   "modulos":{
     "planeacion":
       {        
-      "carga_citas": "APPOINTMENT_LOAD",
-      "carga_citas_manual": "MANUAL_APPOINTMENT_LOAD"
+        "carga_citas": "APPOINTMENT_LOAD",
+        "carga_citas_manual": "MANUAL_APPOINTMENT_LOAD",
+        "conformador_viajes": "SHIPMENT_SHAPER",
+        "carga_pedidos": "ORDER_LOAD"
       },
     "eventos":
       {        
-      "entrada": "ENTRANCE",
-      "inic_carga": "START_LOAD",
-      "fin_carga": "END_LOAD",
-      "docs": "ENTRANCE",
-      "salida": "EXIT"
+        "entrada": "ENTRANCE",
+        "inic_carga": "START_LOAD",
+        "fin_carga": "END_LOAD",
+        "docs": "DOCUMENT",
+        "salida": "EXIT",
+        "generico_01": "GENERIC_01",
+        "generico_02": "GENERIC_02",
+        "generico_03": "GENERIC_03",
+        "enrampe": "ENRAMPE"
       },
-      "tendering":
-        {
-          "asignacion": "TENDERING_OPERATIVE_REPORT"
-        },
-      "reporteria":{
+    "tendering":
+      {
+        "asignacion": "TENDERING_OPERATIVE_REPORT"
+      },
+    "reporteria":
+      {
         "sabana_de_datos": ""
-    }
+      }
   },
   "archivos":
     {
-    "carga_citas_txt_iron_demo": "Citas_pruebas_qa.txt",
-    "carga_citas_txt_ayvi": "Carga_citas_ayvi.txt",
-    "nume": "5",
-    "nume2": "4"
-    },
-    "Pop_Up":{
-      "Texto_pop_up":"Datos incorrectos",
-      "Texto_pop_up1":"Los datos ingresados son incorrectos. Revisalos e inténtalo de nuevo.",
-      "Recuperar_contraseña":"Recuperar Contraseña",
-      "Texto_recuperar_contraseña":"En caso de que la cuenta exista, se enviará un correo electrónico con la información necesaria para poder recuperarla."
-    },
-    "Detalles_de_viaje":{
-      "pedido":"PEDIDO1367",
-      "Cita_de_entrega":"2021-08- 20:00:00"
+      "carga_citas_txt_iron_demo": "Citas_pruebas_qa.txt",
+      "carga_citas_txt_ayvi": "Carga_citas_ayvi.txt",
+      "carga_pedidos_txt_autozone": "PedidosAutozone.txt",
+      "carga_pedidos_txt_kimberly": "carga_pedidos_kimberly.txt",
+      "carga_pedidos_txt_vasconia": "carga_pedidos_vasconia.txt",
+      "nume_citas": "3",
+      "nume_pedidos": "2"
     }
 }
